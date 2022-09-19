@@ -15,8 +15,9 @@ if (isset($_SESSION['user_data'])) {
         if ($_POST['user_name'] != "" || $_POST['password'] != "") {
             $user_name = $_POST['user_name'];
             $password = $_POST['password'];
+            // https://totco.kakebe.com/api/api/users/createUser.php https://totco.kakebe.com/api
 
-            $jsonobj =  file_get_contents("http://localhost/api_TotcoOffline/api/users/loginUser.php?user_name=$user_name&password=$password");
+            $jsonobj =  file_get_contents("https://totco.kakebe.com/api/api/users/loginUser.php?user_name=$user_name&password=$password");
 
             $PHPobj = json_decode($jsonobj);
 
