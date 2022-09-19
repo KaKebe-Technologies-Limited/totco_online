@@ -4,7 +4,7 @@ if (isset($_SESSION['user_data'])) {
     // remove all session variables
     session_unset();
     session_destroy();
-    header("Location:http://localhost/totco/login.php");
+    header("Location:login.php");
     die;
   }
 } else {
